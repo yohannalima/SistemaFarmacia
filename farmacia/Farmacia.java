@@ -24,18 +24,23 @@ public class Farmacia {
 	}
 	
 	public void comprarRemedio(int codigo, int quantidade) {
-		for (Remedio nRemedio : remedio) {
-			if (nRemedio.getCodigo() == codigo) {
-				if (nRemedio.getQuantEstoque() >= quantidade) {
-					int retirada = nRemedio.getQuantEstoque() - quantidade;
-					nRemedio.setQuantEstoque(retirada);
-				}else {
-					System.out.println("Temos apenas " + 
-						nRemedio.getQuantEstoque() + " " + 
-						nRemedio.getNome() + "(s) em estoque.");
-				}	
+		try {
+			for (Remedio nRemedio : remedio) {
+				if (nRemedio.getCodigo() == codigo) {
+					if (nRemedio.getQuantEstoque() >= quantidade) {
+						int retirada = nRemedio.getQuantEstoque() - quantidade;
+						nRemedio.setQuantEstoque(retirada);
+					}else {
+						System.out.println("Temos apenas " + 
+								nRemedio.getQuantEstoque() + " " + 
+								nRemedio.getNome() + "(s) em estoque.");
+					}
 			}
 		}
+	 	} catch (Exception e) {
+			System.out.println("Informe valores válidos.");
+		}
+			
 	}
 	
 	public void listarEstoque() {
