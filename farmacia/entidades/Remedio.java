@@ -1,7 +1,5 @@
 package br.com.farmacia.entidades;
 
-//import java.util.ArrayList;
-
 public class Remedio {
 	
 	private String nome;
