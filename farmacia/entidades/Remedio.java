@@ -5,9 +5,7 @@ package br.com.farmacia.entidades;
 public class Remedio {
 	
 	private String nome;
-	//private ArrayList<String> nomesRemedios = new ArrayList<String>();
 	private int codigo;
-	//private ArrayList<Integer> codigosRemedios = new ArrayList<Integer>();
 	private int quantEstoque;
 	
 	public Remedio(int codigo, String nome) {
